@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+    <title>Influenza Staffing Case Study</title>
+</head>
+
+<body>
+    <!--Header-->
+    <section id="header">
+        <div class="project-intro">
+            <h1>Influenza Staffing Plan Analysis</h1>
+            <p>Exploratory analysis for a medical staffing agency that supplies hospitals and cinics with
+                temporary
+                support
+                staff,
+                <br>seeking to create a staffing plan for the upcoming influenza season.
+            </p>
+            <div class="inner">
+                <ul class="actions special">
+                    <li><a href="index.html" class="button scrolly">Home</a>
+                    </li>
+                    <li><a href="#summary" class="button scrolly">Analysis</a>
+                    </li>
+                    <li><a href="#tableau" class="button scrolly">Storyboard</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!--Project Summary-->
+    <section id="summary" class="main style1">
+        <div class="container">
+            <div class="row gtr-150">
+                <div class="col-6 col-12-medium">
+
+                    <header class="major">
+                        <h2>Objective</h2>
+                    </header>
+
+
+                    <p>As my second course project with CareerFoundry I took time to understand the fundamentals of data
+                        analysis and visualization.</p>
+                    <p>I worked as the data analyst. The staffing plan, based on historical flu data and U.S.
+                        population sizes, was part of a CareerFoundry course. My tutor and mentor reviewed my
+                        analysis for accuracy and helped me interpret my statistical analysis to test hypothesises.
+                    </p><br>
+
+                    <h4>Analysis goals:</h4>
+                    <ul>
+                        <li>Determine when to send staff and hwo many to send to each state</li>
+                        <li>Categorize states by staffing needs based on flu season trends from 2009 to 2017 and
+                            vulnerable
+                            population sizes</li>
+                    </ul>
+                </div>
+                <!--Image Compliment-->
+                <div class="col-6 col-12-medium imp-medium">
+                    <span class="image fit"><img src="images/nurses.jpg" alt="nurses walking in hallway" /></span>
+                </div>
+
+                <!--Github button-->
+                <div class="container">
+                    <p></p>
+                    <ul class="actions special">
+                        <li><a href="https://github.com/candaceavbailey/InfluenzaStaffingPlan"
+                                class="button wide primary" target="_blank">Github
+                            </a></li>
+                        <li><a href="#tableau" class="button wide secondary" target="_blank">Tableau Storyboard
+                            </a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!--Project Details-->
+    <section id="cleaning" class="main style2">
+        <div class="container">
+
+            <h2>Profiled & Cleaned Data
+            </h2>
+            <!--Image Compliment-->
+            <div class="row gtr-150">
+
+                <div class="col-6 col-12-medium imp-medium">
+                    <span class="image fit"><img src="images/Flu_dataProfiling.png"
+                            alt="data profile screenshot" /></span>
+                </div>
+                <div class="col-6 col-12-medium">
+                    <ul>
+                        <li>Cleaned and checked data from the CDC and Census Bureau for consistency and relevance,
+                            removed
+                            suppressed data and formatted state columns to match across data sets</li>
+                        <li>
+                            Created descriptive data profiles to detailing what data types were contained in each
+                            column.
+                        </li>
+                        <li>Combined data sets to identify trends and quantify population sizes to compare against
+                            risk
+                            factors
+                            for
+                            fu relation complications.</li>
+                        <li>Mapped key, secondary, and comparison data.</li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section id="challenges" class="main style 3">
+        <div class="container">
+            <div class="row gtr-150">
+                <div class="col-6 col-12-medium">
+                    <h2>Initial Challenges</h2>
+                    <p>The CDC suppressed flu mortality reporting for states that reported fewer than ten (10) flu
+                        related
+                        deaths each year.</p>
+                    <p>To work around this issue I recoded the suppressed values with the average flu death total, then
+                        converted the death column into a percentage. Showing mortality as a percentsge of the total
+                        population
+                        (in each state) made my analysis easier for stakeholders to interpret.</p>
+                </div>
+                <!--Image Compliment-->
+
+                <div class="col-6 col-12-medium imp-medium">
+                    <span class="image fit"><img src="images/suppressedDataViz.png" alt="computer on webpage" /></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="cleaning" class="main style2">
+        <div class="container">
+            <div class="row gtr-150">
+                <div class="col-6 col-12-medium">
+                    <span class="image fit"><img src="images/inquisitive.jpg" alt="girl in thought" /></span>
+                </div>
+
+                <div class="col-6 col-12-medium">
+                    <h3>Statistical Analysis & Hypothesis Testing
+                    </h3>
+                    <p>
+                        Created a null hypothesis ("Flu deaths in states with larger populations are equal to or lower
+                        than
+                        smaller states.") and an alternate hypothesis ("States with higher populations will have more
+                        deaths
+                        from the flu.") to test the correlation between state
+                        population size(s) and flu mortality.
+                    </p>
+
+                    <h3>Summarized Initial Findings
+                    </h3>
+
+                    <ul>
+                        <li><a href="https://github.com/candaceavbailey/InfluenzaStaffingPlan/blob/main/10%20Interim%20Report.pdf"
+                                class="button wide secondary" target="_blank">Interim Stakeholder Report
+                            </a></li>
+                    </ul>
+                </div>
+
+            </div>
+    </section>
+
+    <!--Exploratory Vizzies-->
+
+    <section id="vizzies" class="main style3">
+        <div class="container">
+
+            <h2>
+                Created visualization to show potential outliers and positive correlation between total population
+                and flu related deaths from 2009 to 2017.
+            </h2>
+
+            <div class="row gtr-100">
+
+                <div class="col-6 col-12-medium">
+                    <span class="image fit"><img src="images/Scatterplot_Flu deaths.png" alt="mortality scatterplot"
+                            width="500" height="600" /></span>
+                </div>
+                <div class="col-6 col-12-medium">
+                    <span class="image fit"><img src="images/Influenza Deaths Box Plot.png"
+                            alt="mortality box plot" /></span>
+                </div>
+                <div class="col-6 col-12-medium">
+                    <span class="image fit"><img src="images/Vulnerability Tree Map.png"
+                            alt="vulnerability treemap" /></span>
+                </div>
+                <div class="col-6 col-12-medium">
+                    <p>There is a positive correlation between population size and flu mortality rates. It can be
+                        assumed that because some states have a denser population of residents within the vulnerable
+                        population group (Age 65 and up) they will see more flu related deaths each year, but that's
+                        not where this plan should stop.</p>
+                    <p>Seasonality, geographic access to health care, tourism and overall lifestyles differences should
+                        be considered when creating an adequate staffing plan to better serve states and cities with
+                        residents at higher risk for contracting complications related to the influenza virus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tableau" class="main style1">
+        <div class="container">
+            <div class="row gtr-150">
+                <h2>Created interactive Tableau presentation for stakeholders</h2>
+            </div>
+
+            <div class='tableauPlaceholder' id='viz1618455877087' style='position: relative'><noscript><a href='#'><img
+                            alt=' '
+                            src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;2_&#47;2_10PRESENTATIONVisuals&#47;StaffingPreparationFluSeason&#47;1_rss.png'
+                            style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='2_10PRESENTATIONVisuals&#47;StaffingPreparationFluSeason' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image'
+                        value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;2_&#47;2_10PRESENTATIONVisuals&#47;StaffingPreparationFluSeason&#47;1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en' />
+                </object></div>
+            <script
+                type='text/javascript'>                    var divElement = document.getElementById('viz1618455877087'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
+        </div>
+    </section>
+
+
+    <section id="contact" class="main style2 special">
+        <div class="container">
+            <header class="major">
+                <h2>Let's work together</h2>
+            </header>
+            <p></p>
+            <ul class="actions special">
+                <li><a href="mailto:candaceavbailey@gmail.com" class="button wide primary" target="_blank">Contact
+                        me</a></li>
+                <li><a href="index.html" class="button wide" target="_self">Home</a>
+                </li>
+                <li><a href="" class="button scrolly" target="_top">Top</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <section id="footer">
+        <ul class="icons">
+            <li><a href="https://github.com/candaceavbailey" class="icon brands alt fa-github"><span
+                        class="label">GitHub</span></a></li>
+            <li><a href="https://www.linkedin.com/in/candaceavbailey/" class="icon brands alt fa-linkedin"><span
+                        class="label">LinkedIn</span></a></li>
+            <li><a href="mailto:candaceavbailey@gmail.com" class="icon solid alt fa-envelope"><span
+                        class="label">Email</span></a></li>
+        </ul>
+        <ul class="copyright">
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+    </section>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
