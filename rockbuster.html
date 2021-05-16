@@ -15,7 +15,7 @@
     <!--Header-->
     <section id="header">
         <div class="project-intro">
-            <h1>Rockbuster Stealth Film Rental Analysi (Work In Progress)</h1>
+            <h1>Rockbuster Stealth Film Rental Analysis</h1>
             <p>Answering business questions with SQL queries to help Rockbuster Stealth's business intelligence (BI)
                 department with the launch strategy for their new online video service.
             </p>
@@ -82,9 +82,11 @@
     <!--Project Details-->
     <section id="cleaning" class="main style2">
         <div class="container">
+            <header class="major">
+                <h2>Understanding Rockbuster's Data Structure
+                </h2>
+            </header>
 
-            <h2>Understanding Rockbuster's Data Structure
-            </h2>
             <!--Image Compliment-->
             <div class="row gtr-150">
                 <div class="col-12-medium imp-medium">
@@ -109,16 +111,54 @@
     <section id="challenges" class="main style 3">
         <div class="container">
             <div class="row gtr-150">
-                <div class="col-6 col-12-medium">
-                    <h2>Joining Tables</h2>
-                    <p>With a snowflake schema multiple fact tables will need to be connected using primary and foreign
-                        keys before results can be filtered.
+                <div class="col-12-medium">
+                    <header class="major">
+                        <h2>Joining Tables</h2>
+                    </header>
+
+                    <p>With a snowflake schema multiple fact tables need to be connected, in SQL, using primary and
+                        foreign
+                        keys before results can be filtered. Each question posed by Rockbuster stakeholders involved
+                        joining two or more tables to answer.Taking time to understand the connections between tables
+                        and creating a <a href="/images/Rockbuster/Data dictionary_Rockbuster.pdf" target="_blank">data
+                            dictionary</a>
+                        was an
+                        import precursor to analysis.
                     </p>
                 </div>
-                <!--Image Compliment-->
+                <div class="col-6 col-12-medium">
+                    <p> The
+                        first step to answering the question <em>which countries customers are based in</em> was to
+                        find how many unique values are in the
+                        Country table, which produced a result of 109 countries. With this information alone decision
+                        cannot be made in regard to how to distribute marketing budgets for different films.
+                    </p>
+                </div>
 
+                <div class="col-6 col-12-medium">
+                    <span class="image fit"><img src="images/Rockbuster/distinct2.png" alt="SQL distinct values"></span>
+                </div>
+
+
+                <div class="col-6 col-12-medium">
+                    <p>The
+                        Country and Customer table can be joined using the primary and foreign keys present in
+                        the Address and City tables. The <em>COUNT</em> function creates a calculated total customer
+                        customer
+                        for each <strong>grouped</strong> country listed.<br>
+                        Grouping the query results by country makes the resulting table easier to understand. The final
+                        result showed the top countries in Rockbuster's database in terms of customer count were India,
+                        China, United States, Japan, Mexico, Russia, Brazil, Philippines, Turkey, and Indonesia.
+                    </p>
+                </div>
+                <!--Schema section-->
                 <div class="col-6 col-12-medium imp-medium">
-                    <span class="image fit"><img src="" alt="joining tables" /></span>
+                    <span class="image fit"><img src="images/Rockbuster/Inkedcustomer_country_JOIN_LI.jpg"
+                            alt="joining tables" /></span>
+                </div>
+                <div class="col-12-medium">
+                    <span class="image fit"><img src="images/Rockbuster/Top 10 Countries (Chart) (2).png"></span>
+
                 </div>
             </div>
         </div>
@@ -137,10 +177,9 @@
                 <div class="col-6 col-12-medium">
                     <h3>Querying data
                     </h3>
-                    <p>
-                        Using PostgreSQL, querying insights about Rockbuster's highest revenue generating countries and
-                        customers showed that there was room for improvement their marketing to counrties in Africa.
-                    </p>
+                    <p>The inner join method is used throughout this project to answer the remaining questions and
+                        extract small data tables that can be loaded into Tableau to create a presentation for
+                        stakeholders.</p>
                     <!-- <p>Insert query top countries</p> -->
                 </div>
 
